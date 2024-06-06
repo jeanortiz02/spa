@@ -1,0 +1,32 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.cita {
+    background-image: url(../img/bg_citas.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 5rem 0;
+    background-repeat: no-repeat;
+
+    text-align: center;
+
+    &__heading {
+        @include m.heading;
+        color: v.$blanco;
+        font-size: 6rem;
+    }
+
+    &__texto {
+        color: v.$blanco;
+        max-width: 60rem;
+        margin: 0 auto;
+        line-height: 2;
+    }
+
+    &__enlace {
+        @include m.boton (v.$primario, v.$blanco);
+        text-align: center;
+        padding: 2rem 10rem;
+    }
+}
